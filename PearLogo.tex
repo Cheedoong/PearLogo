@@ -36,9 +36,18 @@
 \draw [line width=20] (0.016,11.3815) arc (90:162:2.346);
 \draw [line width=20] (-0.016,11.3815) arc (90:18:2.346);
 
-\draw [line width=20] (0,12.430) -- (2.309,14.739) -- cycle;
+\draw [line width=20] (0,12.430) to (1.602,14.032); % 1.602: elementary charge
 
-\fill (0,0) -- (1,1) -- (2,0) -- cycle;
+\draw [fill] (0,12.430) circle [radius=0.345];  % 4*Euler's Constant
+\draw [fill] (1.602,14.032) circle [radius=0.345];
+
+\draw [fill] (0.916,4) circle [radius=0.345]; % 0.916: Catalan Constant
+\draw [fill] (-0.916,4) circle [radius=0.345];
+%\draw [line width=20] (0.916,4) arc (-90:-45:2.346);
+%\draw [line width=20] (-0.916,4) arc (-90:-135:2.346);
+
+\draw [fill] (0.571,4.75) -- (0.571,4) arc (-90:-40.6:0.75) -- cycle;
+\draw [fill] (-0.571,4.75) -- (-0.571,4) arc (-90:-139.4:0.75) -- cycle;
 
 %\node [c1, xshift=0, yshift=0]{};
 
