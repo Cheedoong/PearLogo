@@ -24,32 +24,30 @@
 %\draw [line width=5mm](base) -- +(3.8in,0in);
 %\draw [line width=5mm] (4.3,-11.5) arc (-10:80:1.8);
 
-\draw [line width=20] (0.016,0) arc (90:108:4.36); % 2*e
-\draw [line width=20] (-0.016,0) arc (90:72:4.36);
+\draw [line width=20] (0,0) arc (90:108:6.18);
+\draw [line width=20] (0,0) arc (90:72:6.18);
 
-\draw [line width=20] (-1.324,-0.211) arc (288:144:3.14); % 3.14
-\draw [line width=20] (1.324,-0.211) arc (-108:36:3.14);
+\draw [line width=20] (-2.02,-0.32) arc (270:162:4);
+\draw [line width=20] (2.02,-0.32) arc (-90:18:4);
 
-\draw [line width=20] (-4.837,4.617) arc (-36:-18:18.47); % 32 * Euler's Constant
-\draw [line width=20] (4.837,4.617) arc (216:198:18.47);
+\draw [line width=20] (-5.77,5.02) arc (-36:-18:22.25);
+\draw [line width=20] (5.77,5.02) arc (216:198:22.25);
 
-\draw [line width=20] (0.016,11.3815) arc (90:162:2.346);
-\draw [line width=20] (-0.016,11.3815) arc (90:18:2.346);
+\draw [line width=20] (0,13.09) arc (90:162:2.756);
+\draw [line width=20] (0,13.09) arc (90:18:2.756);
 
-\draw [line width=20] (0,12.430) -- (2.309,14.739) -- cycle;
+\draw [line width=20] (0,14.430) to (2.309,16.739);
 
-\fill (0,0) -- (1,1) -- (2,0) -- cycle;
+\node [c1, xshift=0, yshift=0]{};
 
-%\node [c1, xshift=0, yshift=0]{};
-
-%\node [c1, xshift=-55.80, yshift=-9.20]{};
-%\node [c2, xshift=55.80, yshift=-14.44, rotate=81, circular sector angle=18, line width=1.0mm]{};
+\node [c1, xshift=-55.80, yshift=-9.20]{};
+\node [c2, xshift=55.80, yshift=-14.44, rotate=81, circular sector angle=18, line width=1.0mm]{};
 
 
-%\node [c1, xshift=-55.80, yshift=89.20]{};
+\node [c1, xshift=-55.80, yshift=89.20]{};
 
 
-%\draw [fill=black] (0,20) -- (3mm,0mm) arc (0:30:3mm) -- (0,0);
+\draw [fill=black] (0,20) -- (3mm,0mm) arc (0:30:3mm) -- (0,0);
 
 %torso
 %\draw [line width=5mm](face.230) to[out=260, in=150] +(0.75in,-3.15in);
