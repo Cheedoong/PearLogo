@@ -19,10 +19,6 @@
 \begin{tikzpicture}
 \begin{pgfonlayer} {foreground}
 %\node [elli, fill=white] (face) {};
-%feet
-%\node [below of=face,yshift=-4.1in, xshift=-2.0in] (base){};
-%\draw [line width=5mm](base) -- +(3.8in,0in);
-%\draw [line width=5mm] (4.3,-11.5) arc (-10:80:1.8);
 
 \draw [line width=20] (0.016,0) arc (90:108:4.36); % 2*e
 \draw [line width=20] (-0.016,0) arc (90:72:4.36);
@@ -38,16 +34,37 @@
 
 \draw [line width=20] (0,12.430) to (1.602,14.032); % 1.602: elementary charge
 
-\draw [fill] (0,12.430) circle [radius=0.345];  % 4*Euler's Constant
+\draw [fill] (0,12.430) circle [radius=0.345];  % 4*Brun's Constant
 \draw [fill] (1.602,14.032) circle [radius=0.345];
 
-\draw [fill] (0.916,4) circle [radius=0.345]; % 0.916: Catalan Constant
-\draw [fill] (-0.916,4) circle [radius=0.345];
+\draw [fill] (0.916,4.1314) circle [radius=0.345]; % 0.916: Catalan Constant
+\draw [fill] (-0.916,4.1314) circle [radius=0.345];
 %\draw [line width=20] (0.916,4) arc (-90:-45:2.346);
 %\draw [line width=20] (-0.916,4) arc (-90:-135:2.346);
 
-\draw [fill] (0.571,4.75) -- (0.571,4) arc (-90:-40.6:0.75) -- cycle;
-\draw [fill] (-0.571,4.75) -- (-0.571,4) arc (-90:-139.4:0.75) -- cycle;
+\draw [fill] (0.571,5.1932) -- (0.571,4.1314) arc (-90:-54:1.0618) -- cycle;
+\draw [fill] (-0.571,5.1932) -- (-0.571,4.1314) arc (-90:-126:1.0618) -- cycle;
+
+% Let (x0, y0) denote the center of the right "seed" circle, (x1, y1) be the center of the circular sector, (x1, x2) denote the left intersection point of the two.
+% Let r be the radius of the seed circle. 
+% Let alpha be the angel between (x1, y1) -- (x0, y0) and (x1, y1) -- (x0, y0). 
+% Let beta be the angel between the plumbline through (x1, y1) and (x1, y1) -- (x0, y0). 
+% For example, alpha = 18, beta = 18 --- this is the Golden Triangle case. 
+% sin(alpha) = r / sqrt((x1-x0)^2+(y1-y0)^2); tan(beta) = (y1-y0) / (x0-x1). Solve this, we get: 
+% x1 = x0 - r*cos(beta)/sin(alpha)		0.916 - 0.345*sin(18)/sin(18)	   0.571...
+% y1 = y0 + (x0-x1)/tan(beta)		4.1314 + (0.916-0.571)/tan(18)		5.1932...
+% Since: (x2-x0)^2 + (y2-y0)^2 = r^2; (x2-x1)/(y1-y2) = tan(beta-alpha)		(x-0.916)^2 + (y-4)^2 = 0.345^2; (x-0.571)/(5.0618-y) = tan(18)
+% x2 = ;  y2 = . {x == 1.02261, y == 3.67189}
+
+
+\draw [line width=1] (-6,11.3815) to (6,11.3815);
+\draw [line width=1] (-6,14.032) to (6,14.032);
+\draw [line width=1] (-6,-0.350) to (6,-0.350);
+\draw [line width=1] (-5.4,-1) to (-5.4,16);
+\draw [line width=1] (5.4,-1) to (5.4,16);
+
+% -0.350 + (11.3845+0.350)*(1-0.618) = 4.1314
+% -0.350 + (14.032+0.350)*(1-0.618) = 5.1439
 
 %\node [c1, xshift=0, yshift=0]{};
 

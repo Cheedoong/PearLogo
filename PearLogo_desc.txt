@@ -1,0 +1,37 @@
+L1:L2=L3:L4 =0.618
+Golden Ratio黄金分割;
+
+r1 = 2*e 自然对数的底;
+
+r2 = Pi 圆周率;
+
+r3 = 32*Euler Constant
+欧拉常数;
+
+r4 = 4*Euler Constant;
+
+r5 = 4*Brun Constant;
+布朗常数;
+
+
+gama = 18
+alpha = 36
+beta = 72
+Lead to Golden Triangles
+黄金三角形;
+
+L6 = 1.602
+Elementary Charge
+基本电荷量;
+
+L7 = 0.916
+Catalan Constant
+卡特兰常数;
+
+L5:L4 = 0.75
+Fits any screen/paper;
+
+omega = 45;
+Cannon to the most distant
+射向最远方;
+......
