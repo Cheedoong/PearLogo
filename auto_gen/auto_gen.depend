@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1432645064 source:c:\users\cheedoong\desktop\auto_gen\auto_gen.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<cstdio>
+	<cstdlib>
+
