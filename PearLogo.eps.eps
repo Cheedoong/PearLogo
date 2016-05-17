@@ -1,13 +1,13 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%BoundingBox: 160 243 484 668
-%%HiResBoundingBox: 160.500000 243.000000 483.500000 667.500000
-%XpdfVersion: 3.03
-%%Creator:  XeTeX output 2015.05.27:2329
+%%BoundingBox: 160 232 489 668
+%%HiResBoundingBox: 160.500000 232.000000 488.500000 667.500000
+%XpdfVersion: 3.04
+%%Creator:  XeTeX output 2016.05.17:2026
 %%LanguageLevel: 2
 %%EndComments
 % EPSF created by ps2eps 1.68
 %%BeginProlog
-newpath 160.500000 243.000000 moveto 483.500000 243.000000 lineto 483.500000 667.500000 lineto 160.500000 667.500000 lineto closepath clip
+newpath 160.500000 232.000000 moveto 488.500000 232.000000 lineto 488.500000 667.500000 lineto 160.500000 667.500000 lineto closepath clip
 save
 countdictstack
 mark
@@ -17,30 +17,35 @@ newpath
 %%EndProlog
 %%Page 1 1
 %%BeginProlog
-%%BeginResource: procset xpdf 3.03 0
-%%Copyright: Copyright 1996-2011 Glyph & Cog, LLC
+%%BeginResource: procset xpdf 3.04 0
+%%Copyright: Copyright 1996-2014 Glyph & Cog, LLC
 /xpdf 75 dict def xpdf begin
 % PDF special state
 /pdfDictSize 15 def
 /pdfSetup {
+  /pdfDuplex exch def
   /setpagedevice where {
     pop 2 dict begin
       /Policies 1 dict dup begin /PageSize 6 def end def
-      { /Duplex true def } if
+      pdfDuplex { /Duplex true def } if
     currentdict end setpagedevice
-  } {
-    pop
-  } ifelse
+  } if
+  /pdfPageW 0 def
+  /pdfPageH 0 def
 } def
 /pdfSetupPaper {
-  2 array astore
-  /setpagedevice where {
-    pop 2 dict begin
-      /PageSize exch def
-      /ImagingBBox null def
-    currentdict end setpagedevice
+  2 copy pdfPageH ne exch pdfPageW ne or {
+    /pdfPageH exch def
+    /pdfPageW exch def
+    /setpagedevice where {
+      pop 3 dict begin
+        /PageSize [pdfPageW pdfPageH] def
+        pdfDuplex { /Duplex true def } if
+        /ImagingBBox null def
+      currentdict end setpagedevice
+    } if
   } {
-    pop
+    pop pop
   } ifelse
 } def
 /pdfStartPage {
@@ -276,17 +281,14 @@ newpath
 } def
 /pdfIm { image skipEOD } def
 /pdfImM { fCol imagemask skipEOD } def
-/pr { 2 index 2 index 3 2 roll putinterval 4 add } def
-/pdfImClip {
-  gsave
-  0 2 4 index length 1 sub {
-    dup 4 index exch 2 copy
-    get 5 index div put
-    1 add 3 index exch 2 copy
-    get 3 index div put
-  } for
-  pop pop rectclip
+/pr {
+  4 2 roll exch 5 index div exch 4 index div moveto
+  exch 3 index div dup 0 rlineto
+  exch 2 index div 0 exch rlineto
+  neg 0 rlineto
+  closepath
 } def
+/pdfImClip { gsave clip } def
 /pdfImClipEnd { grestore } def
 % shading operators
 /colordelta {
@@ -428,7 +430,9 @@ end
 %%EndProlog
 %%BeginSetup
 xpdf begin
+end
 %%EndSetup
+xpdf begin
 pdfStartPage
 [] 0 d
 1 i
@@ -449,7 +453,7 @@ q
 q
 [1 0 0 1 72 720] cm
 q
-[1 0 0 1 250.12 -456.76] cm
+[1 0 0 1 252.61 -465.32] cm
 q
 /DeviceGray {} CS
 [0] SC
@@ -464,10 +468,14 @@ q
 Q
 q
 q
+/DeviceRGB {} CS
+[0.651 0.522 0.251] SC
+/DeviceRGB {} cs
+[0.651 0.522 0.251] sc
 1 j
 1 J
 0.79701 w
-19.92554 w
+24.90692 w
 0 0 m
 11.89478 0 23.72728 -1.87376 35.03902 -5.5486 c
 35.03859 -5.54944 l
@@ -486,59 +494,71 @@ q
 -35.03859 -5.54944 l
 -23.72687 -1.8746 -11.89435 -0.00084 0.00041 -0.00084 c
 S
-Q
-q
+/DeviceGray {} CS
+[0] SC
 /DeviceGray {} cs
 [0] sc
-25.96567 114.0447 m
-26.92798 114.7438 27.9954 115.28769 29.12653 115.65526 c
-29.12653 115.65518 l
-33.80174 117.17413 36.3604 122.19566 34.84145 126.87088 c
-33.96115 129.58011 31.836 131.70522 29.12683 132.58563 c
-29.12682 132.58554 l
-23.90329 134.28288 18.97446 136.79375 14.53166 140.02205 c
-14.53171 140.02243 l
-11.70416 142.0768 7.7465 141.45009 5.69214 138.62254 c
-4.50162 136.98405 4.16728 134.87343 4.79317 132.94722 c
-4.79326 132.94728 l
-6.4905 127.72426 7.3552 122.26074 7.35513 116.76839 c
-7.35551 116.76831 l
-7.3555 111.85257 11.3405 107.86737 16.25623 107.86736 c
-19.10486 107.86737 21.78276 109.23169 23.45724 111.53624 c
-23.45717 111.53627 l
-24.1563 112.49841 25.00343 113.34552 25.96573 114.04465 c
+Q
+q
+/DeviceRGB {} cs
+[0.651 0.5216 0.251] sc
+34.58313 114.0447 m
+35.78592 114.91861 37.12012 115.59848 38.53394 116.05797 c
+38.53394 116.05786 l
+44.37761 117.95667 47.57553 124.23337 45.67673 130.07704 c
+44.57628 133.46336 41.91988 136.11954 38.53352 137.21986 c
+38.53352 137.21976 l
+32.00438 139.3411 25.84354 142.4793 20.29015 146.51427 c
+20.2902 146.51477 l
+16.75587 149.08247 11.80905 148.2989 9.24135 144.76457 c
+7.75333 142.71652 7.33556 140.07835 8.11795 137.67072 c
+8.11804 137.6708 l
+10.23972 131.14243 11.32079 124.31342 11.32095 117.44829 c
+11.32144 117.44818 l
+11.32166 111.30383 16.30284 106.32274 22.44719 106.32295 c
+26.00783 106.32312 29.35493 108.02858 31.44785 110.90918 c
+31.44775 110.90923 l
+32.3216 112.1119 33.38042 113.17073 34.58322 114.04465 c
 f
 Q
 q
-/DeviceGray {} cs
-[0] sc
--25.96567 114.0447 m
--25.00337 113.34557 -24.15623 112.49846 -23.4571 111.53632 c
--23.45717 111.53627 l
--20.56769 107.55934 -15.00127 106.67786 -11.02434 109.56732 c
--8.71979 111.2418 -7.35547 113.9197 -7.35544 116.76834 c
--7.35551 116.76831 l
--7.35558 122.26067 -6.49088 127.72418 -4.79362 132.9472 c
--4.79326 132.94728 l
--3.7133 136.27129 -5.53247 139.84154 -8.85646 140.92148 c
--10.78268 141.54736 -12.89331 141.21303 -14.53178 140.02249 c
--14.53171 140.02243 l
--18.9745 136.79413 -23.90334 134.28326 -29.12686 132.58592 c
--29.12682 132.58554 l
--33.8019 131.06636 -36.36043 126.0448 -34.84125 121.36972 c
--33.96085 118.66054 -31.83574 116.5354 -29.12651 115.65509 c
--29.12653 115.65518 l
--27.9954 115.28761 -26.92798 114.74373 -25.96567 114.04462 c
+/DeviceRGB {} cs
+[0.651 0.5216 0.251] sc
+-34.58313 114.0447 m
+-33.38033 113.17078 -32.3215 112.11194 -31.44766 110.90927 c
+-31.44775 110.90923 l
+-27.83627 105.93819 -20.8786 104.8361 -15.90758 108.44757 c
+-13.02698 110.54048 -11.32152 113.88759 -11.32135 117.44823 c
+-11.32144 117.44818 l
+-11.32127 124.31331 -10.2402 131.14232 -8.11853 137.6707 c
+-8.11804 137.6708 l
+-6.76802 141.82558 -9.04169 146.28824 -13.19646 147.63826 c
+-15.60408 148.42067 -18.24225 148.0029 -20.2903 146.51486 c
+-20.2902 146.51477 l
+-25.8436 142.4798 -32.00444 139.3416 -38.53358 137.22026 c
+-38.53352 137.21976 l
+-44.37717 135.32108 -47.57544 129.04459 -45.67676 123.20094 c
+-44.57643 119.81459 -41.92026 117.15819 -38.53394 116.05775 c
+-38.53394 116.05786 l
+-37.12012 115.59837 -35.78592 114.9185 -34.58313 114.04459 c
 f
 Q
 q
+/DeviceRGB {} CS
+[0.651 0.522 0.251] SC
+/DeviceRGB {} cs
+[0.651 0.522 0.251] sc
 1 j
 1 J
 0.79701 w
-19.92554 w
-0 348.58797 m
-45.41173 393.9997 l
+24.90692 w
+0 354.65431 m
+45.41173 400.06606 l
 S
+/DeviceGray {} CS
+[0] SC
+/DeviceGray {} cs
+[0] sc
 Q
 Q
 Q
@@ -548,8 +568,8 @@ Q
 showpage
 %%PageTrailer
 pdfEndPage
-%%Trailer
 end
+%%Trailer
 %%DocumentSuppliedResources:
 %%Trailer
 cleartomark
