@@ -15,8 +15,8 @@
 \definecolor{pear}{RGB}{166,133,64} % HKUST's {166,133,63}
 
 % % % % % % % % [Begin] These are configurable % % % % % % %
-\FPeval{\lw}{28}        % linewidth
-\FPeval{\rone}{4}    % r1: radius of circle c1
+\FPeval{\lw}{30}        % linewidth
+\FPeval{\rone}{4}       % r1: radius of circle c1
 \FPeval{\rtwo}{3.14}    % r2: 3.14 pi
 \FPeval{\rthree}{18.47} % r3. 18.47 = 32 * Euler's Constant
 \FPeval{\rfour}{2.349461690234380417} % to be fixed for higher precision
@@ -24,7 +24,7 @@
 \FPeval{\b}{36}         % beta
 \FPeval{\c}{18}         % gamma
 \FPeval{\ydelta}{1.414} % distance from the top of the pear body to the bottom of the bar
-\FPeval{\ll}{1.602}     % lengh of the x-leg of the bar
+\FPeval{\ll}{1.602}         % lengh of the x-leg of the bar
 % % % % % % % % [End] These are configurable % % % % % % %
 
 % % % % % % % % [Begin] Obsolete % % % % % % %
@@ -69,7 +69,7 @@
 (-\xtwo,\ytwo) arc (180-\b:270+\a:\rtwo) --
 (-\xone,\yone) arc (90+\a:90:\rone);
 
-\fill [fill=pear,shift={(\xseed,\yseed)},rotate=\b,scale=0.125]  (0,0) arc (90:90-\a:\rone) -- % can also be (-eps,0)
+\fill [fill=pear,shift={(\xseed,\yseed)},rotate=(\b+\c)/2,scale=0.125]  (0,0) arc (90:90-\a:\rone) -- % can also be (-eps,0)
 (\xone,\yone) arc (-90-\a:\b:\rtwo) --
 (\xtwo,\ytwo) arc (180+\b:180+\c:\rthree) --
 (\xthree,\ythree) arc (\c:180-\c:\rfour) --
@@ -77,7 +77,7 @@
 (-\xtwo,\ytwo) arc (180-\b:270+\a:\rtwo) --
 (-\xone,\yone) arc (90+\a:90:\rone);
 
-\fill [fill=pear,shift={(-\xseed,\yseed)},rotate=-\b,scale=0.125]  (0,0) arc (90:90-\a:\rone) -- % can also be (-eps,0)
+\fill [fill=pear,shift={(-\xseed,\yseed)},rotate=-(\b+\c)/2,scale=0.125]  (0,0) arc (90:90-\a:\rone) -- % can also be (-eps,0)
 (\xone,\yone) arc (-90-\a:\b:\rtwo) --
 (\xtwo,\ytwo) arc (180+\b:180+\c:\rthree) --
 (\xthree,\ythree) arc (\c:180-\c:\rfour) --
